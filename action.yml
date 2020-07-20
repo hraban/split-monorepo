@@ -1,11 +1,18 @@
 # action.yml
 name: 'Split Monorepo'
 description: 'Split the directories in a monorepo up into separate per-project repos'
-# inputs:
-#   name:
-#     description: 'Who to greet'
-#     required: true
-#     default: 'World'
+inputs:
+  monorepo_token:
+    description: >
+      Token for the monorepo (to read code from). Use GITHUB_TOKEN for
+      this.
+    required: true
+  subrepo_token:
+    description: >
+      Token for the target repos (to write to). Create a personal access
+      token for this with an account that has write access to each of the
+      target repos
+    required: true
 # outputs:
 #   time: # id of output
 #     description: 'The time we greeted you'
